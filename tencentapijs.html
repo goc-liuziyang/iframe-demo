@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title>调用腾讯视频播放器APi</title>
+ <script src="//vm.gtimg.cn/tencentvideo/txp/js/iframe/api.js" charset="utf-8"></script>
+</head>
+<body>
+<div id="iframe"></div>
+<script>
+     var video = new tvp.VideoInfo();
+    video.setVid("q0011iyvdam");//视频vid
+    var player = new tvp.Player(750, 450);//视频高宽
+    player.setCurVideo(video);
+    player.addParam("autoplay","0");//是否自动播放，1为自动播放，0为不自动播放
+    player.addParam("wmode","opaque");
+    player.addParam("showend",0);
+    player.addParam("adplay",0);
+    player.addParam("wmode","transparent");
+    player.addParam("pic","http://ossweb-img.qq.com/images/roco/act/a20120925movie/video_pic.jpg");//默认图片地址
+    player.write("videoCon");
+</script>
+ </body>
+ </html
